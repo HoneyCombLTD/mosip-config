@@ -93,7 +93,8 @@
          </when>
          <when>
             <jsonpath>$.[?(@['isValid'] == false &amp;&amp; @['internalError'] == false)]</jsonpath>
-            <to uri="workflow-cmd://complete-as-failed" />
+            <!-- <to uri="workflow-cmd://complete-as-failed" /> -->
+            <to uri="eventbus://packet-classifier-bus-in" />
             <to uri="workflow-cmd://anonymous-profile" />
          </when>
          <otherwise>
