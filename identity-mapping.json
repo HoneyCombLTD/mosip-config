@@ -161,6 +161,9 @@
 		},
 		"poe": {
 			"value": "proofOfException"
+		},
+		"signature":{
+			"value": "residentSignature"
 		}
 	},
 	"attributeUpdateCountLimit": {
