@@ -118,7 +118,7 @@
       <choice>
          <when>
             <jsonpath>$.[?(@['isValid'] == false &amp;&amp; @['internalError'] == true)]</jsonpath>
-            <to uri="workflow-cmd://complete-as-failed" />
+            <!-- <to uri="workflow-cmd://complete-as-failed" /> -->
             <to uri="workflow-cmd://anonymous-profile" />
          </when>
          <when>
