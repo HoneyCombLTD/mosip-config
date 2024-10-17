@@ -73,13 +73,13 @@ INTENT_VERIFICATION_MAX_INTERVAL = 20.0
 KAFKA_CONSUMER_MAX_POLL_RECORDS = 3
 
 # The maximum retry count
-KAFKA_CONSUMER_FETCH_MAX_BYTES = 3145728
+KAFKA_CONSUMER_FETCH_MAX_BYTES = 20971520
 
 # The maximum retry count
-KAFKA_CONSUMER_MAX_PARTITION_FETCH_BYTES = 524288
+KAFKA_CONSUMER_MAX_PARTITION_FETCH_BYTES = 20971520
 
-KAFKA_MESSAGE_MAX_BYTES = 20971520
-KAFKA_SOCKET_REQUEST_MAX_BYTES = 20971520
+# KAFKA_MESSAGE_MAX_BYTES = 20971520
+# KAFKA_SOCKET_REQUEST_MAX_BYTES = 20971520
 
 # Kafka topic which is stores consolidated websub subscribers for this server
 META_TOPICS = "registered-websub-topics,consolidated-websub-topics,registered-websub-subscribers,consolidated-websub-subscribers"
