@@ -1,0 +1,44 @@
+{
+    "shareableAttributes": [
+      {
+        "attributeName": "biometrics",
+        "group": "CBEFF",
+        "source": [
+          {
+            "attribute": "registration-client/NEW/individualBiometrics",
+            "filter": [
+              {
+                "type": "Iris"
+              }
+            ]
+          },
+          {
+            "attribute": "CNIE/verification/biometrics",
+            "filter": [
+              {
+                "type": "Finger"
+              }
+            ]
+          },
+          {
+            "attribute": "CNIE/verification/biometrics",
+            "filter": [
+              {
+                "type": "Face"
+              }
+            ]
+          }
+        ],
+        "encrypted": false,
+        "format": "extraction"
+      }
+    ],
+    "dataSharePolicies": {
+      "typeOfShare": "Data Share",
+      "validForInMinutes": "300000",
+      "transactionsAllowed": "20000",
+      "encryptionType": "Partner Based",
+      "shareDomain": "api-internal.techno-associates.live",
+      "source": "Packet Manager"
+    }
+  }
