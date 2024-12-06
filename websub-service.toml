@@ -49,7 +49,7 @@ MOSIP_AUTH_BASE_URL = "${mosip.kernel.authmanager.url}/v1/authmanager"
 MOSIP_AUTH_VALIDATE_TOKEN_URL = "/authorize/admin/validateToken"
 
 # The token validation URL of IDP
-DISK_SPACE_THRESHOLD = 1073741824
+DISK_SPACE_THRESHOLD = 20971520
 
 # The token validation URL of IDP
 PARTNER_USER_ID_PREFIX = "service-account-"
@@ -73,10 +73,10 @@ INTENT_VERIFICATION_MAX_INTERVAL = 20.0
 KAFKA_CONSUMER_MAX_POLL_RECORDS = 3
 
 # The maximum retry count
-KAFKA_CONSUMER_FETCH_MAX_BYTES = 1073741824
+KAFKA_CONSUMER_FETCH_MAX_BYTES = 20971520
 
 # The maximum retry count
-KAFKA_CONSUMER_MAX_PARTITION_FETCH_BYTES = 1073741824
+KAFKA_CONSUMER_MAX_PARTITION_FETCH_BYTES = 20971520
 
 # Kafka topic which is stores consolidated websub subscribers for this server
 META_TOPICS = "registered-websub-topics,consolidated-websub-topics,registered-websub-subscribers,consolidated-websub-subscribers"
