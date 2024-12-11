@@ -3,8 +3,8 @@
 		"IDSchemaVersion": {
 			"value": "IDSchemaVersion"
 		},
-		"selectedHandles" : {
-			"value" : "selectedHandles"
+		"selectedHandles": {
+			"value": "selectedHandles"
 		},
 		"name": {
 			"value": "fullName"
@@ -66,6 +66,9 @@
 		"residenceStatus": {
 			"value": "residenceStatus"
 		},
+		"residentSignature": {
+			"value": "residentSignature"
+		},
 		"preferredLanguage": {
 			"value": "preferredLang"
 		},
@@ -114,13 +117,12 @@
 		"address": {
 			"value": "addressLine1,addressLine2,addressLine3,city,region,province,postalCode"
 		},
-
 		"individual_id": {
 			"value": "individual_id"
 		},
 		"attributes": {
-		   "value": "fln,ad1,ad2,ad3,cit,reg,pro,poc,cph,em,ph,gen,dob"
-		},  
+			"value": "fln,ad1,ad2,ad3,cit,reg,pro,poc,cph,em,ph,gen,dob"
+		},
 		"street_address": {
 			"value": "addressLine1,addressLine2,addressLine3"
 		},
