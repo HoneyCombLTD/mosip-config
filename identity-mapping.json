@@ -6,8 +6,14 @@
 		"selectedHandles": {
 			"value": "selectedHandles"
 		},
-		"name": {
-			"value": "fullName"
+		"firstName": {
+			"value": "firstName"
+		},
+		"lastName": {
+			"value": "lastName"
+		},
+		"otherName": {
+			"value": "otherName"
 		},
 		"gender": {
 			"value": "gender"
@@ -42,11 +48,35 @@
 		"emailId": {
 			"value": "email"
 		},
+		"nin": {
+			"value": "NIN"
+		},
 		"uin": {
 			"value": "UIN"
 		},
 		"vid": {
 			"value": "VID"
+		},
+		"validityFrom": {
+			"value": "validityFrom"
+		},
+		"validityTo": {
+			"value": "validityTo"
+		},
+		"driverRestriction": {
+			"value": "driverRestriction"
+		},
+		"issueNo": {
+			"value": "issueNo"
+		},
+		"code": {
+			"value": "code"
+		},
+		"firstIssue": {
+			"value": "firstIssue"
+		},
+		"vehicleRestriction": {
+			"value": "vehicleRestriction"
 		},
 		"individualBiometrics": {
 			"value": "individualBiometrics"
