@@ -6,6 +6,7 @@
 		"selectedHandles": {
 			"value": "selectedHandles"
 		},
+		"fullName": "name",
 		"name": {
 			"value": "firstName,lastName,givenName"
 		},
