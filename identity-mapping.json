@@ -13,7 +13,7 @@
 			"value": "lastName"
 		},
 		"otherName": {
-			"value": "otherName"
+			"value": "givenName"
 		},
 		"gender": {
 			"value": "gender"
