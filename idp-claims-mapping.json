@@ -1,7 +1,43 @@
 {
   "idp-claims-mapping": {
     "name": {
-      "attributeName": "fullName"
+      "attributeName": "firstName,lastName,givenName"
+    },
+    "firstName": {
+      "attributeName": "firstName"
+    },
+    "lastName": {
+      "attributeName": "lastName"
+    },
+    "givenName": {
+      "attributeName": "givenName"
+    },
+    "NIN": {
+      "attributeName": "NIN"
+    },
+    "firstIssue": {
+      "attributeName": "firstIssue"
+    },
+    "issueNo": {
+      "attributeName": "issueNo"
+    },
+    "code": {
+      "attributeName": "code"
+    },
+    "validityFrom": {
+      "attributeName": "validityFrom"
+    },
+    "validityTo": {
+      "attributeName": "validityTo"
+    },
+    "driverRestriction": {
+      "attributeName": "driverRestriction"
+    },
+    "vehicleRestriction": {
+      "attributeName": "vehicleRestriction"
+    },
+    "residentSignature": {
+      "attributeName": "residentSignature"
     },
     "gender": {
       "attributeName":  "gender"

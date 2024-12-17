@@ -3,6 +3,15 @@
     "fullName": {
       "documentCategory": "proofOfIdentity"
     },
+    "firstName": {
+      "documentCategory": "proofOfIdentity"
+    },
+    "lastName": {
+      "documentCategory": "proofOfIdentity"
+    },
+    "givenName": {
+      "documentCategory": "proofOfIdentity"
+    },
     "parentOrGuardianRID": {
       "documentCategory" : "proofOfRelationship"
     },
