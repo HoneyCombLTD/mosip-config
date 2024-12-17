@@ -1,7 +1,7 @@
 {
     "ida-mapping": {
         "name": [
-            "fullName"
+            "firstName,lastName"
         ],
         "dob": [
             "dateOfBirth"
@@ -30,6 +30,12 @@
         "location1": [
             "city"
         ],
+        "residentSignature": {
+			"value": "residentSignature"
+		},
+        "nin": {
+			"value": "NIN"
+		},
         "location2": [
             "region"
         ],

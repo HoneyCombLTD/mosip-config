@@ -3,6 +3,9 @@
     "name": {
       "attributeName": "firstName,lastName,givenName"
     },
+    "fullName": {
+      "attributeName": "firstName,lastName,givenName"
+    },
     "firstName": {
       "attributeName": "firstName"
     },
@@ -12,8 +15,8 @@
     "givenName": {
       "attributeName": "givenName"
     },
-    "NIN": {
-      "attributeName": "NIN"
+    "nin": {
+      "attributeName": "nin"
     },
     "firstIssue": {
       "attributeName": "firstIssue"
