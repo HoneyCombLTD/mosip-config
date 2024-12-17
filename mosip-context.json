@@ -1,57 +1,131 @@
 {
-  "@context": [{
-       "@version": 1.1
-    },"https://www.w3.org/ns/odrl.jsonld", {
-    "mosip": "https://${mosip.api.public.host}/mosip#",
-    "schema": "http://schema.org/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "vcVer": "mosip:vcVer",
-    "UIN": "mosip:UIN",
-    "addressLine1": {
-        "@id": "https://${mosip.api.public.host}/mosip#addressLine1",
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-    "addressLine2": {
-        "@id": "https://${mosip.api.public.host}/mosip#addressLine2",
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-    "addressLine3": {
-        "@id": "https://${mosip.api.public.host}/mosip#addressLine3",
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-    "city": {
-        "@id": "https://${mosip.api.public.host}/mosip#city",
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-     "gender": {
-        "@id": "https://${mosip.api.public.host}/mosip#gender",
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-     "residenceStatus": {
-        "@id": "https://${mosip.api.public.host}/mosip#residenceStatus",
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-    
-    "dateOfBirth": "mosip:dateOfBirth",
-    "email": "mosip:email",
-    "fullName": {
-
-        "@id": "https://${mosip.api.public.host}/mosip#fullName",
-
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-  "phone": "mosip:phone",
-    "postalCode": "mosip:postalCode",
-    "province": {
-
-        "@id": "https://${mosip.api.public.host}/mosip#province",
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-    "region": {
-        "@id": "https://${mosip.api.public.host}/mosip#region",
-
-        "@context": {"value": "rdf:value", "lang": "@language"}
-    },
-    "biometrics": "mosip:biometrics"
-  }]
+    "@context": [
+        {
+            "@version": 1.1
+        },
+        "https://www.w3.org/ns/odrl.jsonld",
+        {
+            "mosip": "https://${mosip.api.public.host}/mosip#",
+            "schema": "http://schema.org/",
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "vcVer": "mosip:vcVer",
+            "UIN": "mosip:UIN",
+            "addressLine1": {
+                "@id": "https://${mosip.api.public.host}/mosip#addressLine1",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "addressLine2": {
+                "@id": "https://${mosip.api.public.host}/mosip#addressLine2",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "addressLine3": {
+                "@id": "https://${mosip.api.public.host}/mosip#addressLine3",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "city": {
+                "@id": "https://${mosip.api.public.host}/mosip#city",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "gender": {
+                "@id": "https://${mosip.api.public.host}/mosip#gender",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "residenceStatus": {
+                "@id": "https://${mosip.api.public.host}/mosip#residenceStatus",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "dateOfBirth": "mosip:dateOfBirth",
+            "email": "mosip:email",
+            "fullName": {
+                "@id": "https://${mosip.api.public.host}/mosip#fullName",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "firstName": {
+                "@id": "https://${mosip.api.public.host}/mosip#firstName",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "givenName": {
+                "@id": "https://${mosip.api.public.host}/mosip#givenName",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "lastName": {
+                "@id": "https://${mosip.api.public.host}/mosip#lastName",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "residentSignature": "mosip:residentSignature",
+            "code": {
+                "@id": "https://${mosip.api.public.host}/mosip#code",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "driverRestriction": {
+                "@id": "https://${mosip.api.public.host}/mosip#driverRestriction",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "vehicleRestriction": {
+                "@id": "https://${mosip.api.public.host}/mosip#vehicleRestriction",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "NIN": "mosip:NIN",
+            "firstIssue": "mosip:firstIssue",
+            "issueNo": "mosip:issueNo",
+            "validityFrom": "mosip:validityFrom",
+            "validityTo": "mosip:validityTo",
+            "phone": "mosip:phone",
+            "postalCode": "mosip:postalCode",
+            "province": {
+                "@id": "https://${mosip.api.public.host}/mosip#province",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "region": {
+                "@id": "https://${mosip.api.public.host}/mosip#region",
+                "@context": {
+                    "value": "rdf:value",
+                    "lang": "@language"
+                }
+            },
+            "biometrics": "mosip:biometrics"
+        }
+    ]
 }
