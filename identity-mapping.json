@@ -51,7 +51,7 @@
 		"emailId": {
 			"value": "email"
 		},
-		"nin": {
+		"NIN": {
 			"value": "NIN"
 		},
 		"uin": {

@@ -15,8 +15,8 @@
     "givenName": {
       "attributeName": "givenName"
     },
-    "nin": {
-      "attributeName": "nin"
+    "NIN": {
+      "attributeName": "NIN"
     },
     "firstIssue": {
       "attributeName": "firstIssue"

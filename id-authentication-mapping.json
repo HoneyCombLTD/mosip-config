@@ -33,7 +33,7 @@
         "residentSignature": {
 			"value": "residentSignature"
 		},
-        "nin": {
+        "NIN": {
 			"value": "NIN"
 		},
         "location2": [
