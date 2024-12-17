@@ -7,7 +7,7 @@
 			"value": "selectedHandles"
 		},
 		"name": {
-			"value": "firstName"
+			"value": "firstName,lastName,givenName"
 		},
 		"firstName": {
 			"value": "firstName"
