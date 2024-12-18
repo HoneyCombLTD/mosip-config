@@ -4,7 +4,7 @@
 <head>
     <style>
         body {
-            font-family: "" Roboto"";
+            font-family: " Roboto";
         }
 
         table,
@@ -196,12 +196,12 @@
             margin-bottom: 4px;
         }
 
-        input[type="" radio""] {
+        input[type=" radio"] {
             display: none;
         }
 
-        input[type="" radio""]+label:before {
-            content: "" "";
+        input[type=" radio"]+label:before {
+            content: " ";
             display: inline-block;
             width: 15px;
             height: 15px;
@@ -213,7 +213,7 @@
             border-radius: 50%;
         }
 
-        input[type="" radio""]:checked+label:before {
+        input[type=" radio"]:checked+label:before {
             background-color: #FF4081;
             border-color: #FF4081;
         }
@@ -247,7 +247,7 @@
             padding: 2px
         }
     </style>
-    <script>function changeColour(element) { var div = document.getElementById(""radioId""); if (element.value == ""yes"") { div.style = ""border: 2px solid #68A933""; } if (element.value == ""no"") { div.style = ""border: 2px solid #FF0000""; } } document.onreadystatechange = function () { if (document.readyState === ""complete"") { var body = document.getElementsByTagName(""body"")[0]; body.addEventListener(""dragstart"", function (event) { event.preventDefault(); }); body.addEventListener(""selectstart"", function (event) { event.preventDefault(); }); } }</script>
+    <script>function changeColour(element) { var div = document.getElementById("radioId"); if (element.value == "yes") { div.style = "border: 2px solid #68A933"; } if (element.value == "no") { div.style = "border: 2px solid #FF0000"; } } document.onreadystatechange = function () { if (document.readyState === "complete") { var body = document.getElementsByTagName("body")[0]; body.addEventListener("dragstart", function (event) { event.preventDefault(); }); body.addEventListener("selectstart", function (event) { event.preventDefault(); }); } }</script>
 </head>
 
 <body>
@@ -273,136 +273,136 @@
             <hr />
             <p class=head><b>${DemographicInfo}</b></p>
             <hr />
-            <div class="" demoDiv"">
+            <div class=" demoDiv">
                 <table>
-                    <tr> #if( $demographics.get(""firstName"") ) <th>$demographics.get(""firstName"").get(""label"")
+                    <tr> #if( $demographics.get("firstName") ) <th>$demographics.get("firstName").get("label")
                         </th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""firstName"") ) <td>$demographics.get(""firstName"").get(""value"")
+                    <tr> #if( $demographics.get("firstName") ) <td>$demographics.get("firstName").get("value")
                         </td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""lastName"") ) <th>$demographics.get(""lastName"").get(""label"")</th>
+                    <tr> #if( $demographics.get("lastName") ) <th>$demographics.get("lastName").get("label")</th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""lastName"") ) <td>$demographics.get(""lastName"").get(""value"")</td>
+                    <tr> #if( $demographics.get("lastName") ) <td>$demographics.get("lastName").get("value")</td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""givenName"") ) <th>$demographics.get(""givenName"").get(""label"")
+                    <tr> #if( $demographics.get("givenName") ) <th>$demographics.get("givenName").get("label")
                         </th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""givenName"") ) <td>$demographics.get(""givenName"").get(""value"")
+                    <tr> #if( $demographics.get("givenName") ) <td>$demographics.get("givenName").get("value")
                         </td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""dateOfBirth"") ) <th>$demographics.get(""dateOfBirth"").get(""label"")
+                    <tr> #if( $demographics.get("dateOfBirth") ) <th>$demographics.get("dateOfBirth").get("label")
                         </th> #end </tr>
-                    <tr> #if( $demographics.get(""dateOfBirth"") ) <td>$demographics.get(""dateOfBirth"").get(""value"")
+                    <tr> #if( $demographics.get("dateOfBirth") ) <td>$demographics.get("dateOfBirth").get("value")
                         </td> #end </tr>
-                    <tr> #if( $demographics.get(""gender"") ) <th>$demographics.get(""gender"").get(""label"")</th> #end
+                    <tr> #if( $demographics.get("gender") ) <th>$demographics.get("gender").get("label")</th> #end
                     </tr>
-                    <tr> #if( $demographics.get(""gender"") ) <td>$demographics.get(""gender"").get(""value"")</td> #end
+                    <tr> #if( $demographics.get("gender") ) <td>$demographics.get("gender").get("value")</td> #end
                     </tr>
-                    <tr> #if( $demographics.get(""phone"") ) <th>$demographics.get(""phone"").get(""label"")</th> #end
-                        #if( $demographics.get(""email"") ) <th>$demographics.get(""email"").get(""label"")</th> #end
+                    <tr> #if( $demographics.get("phone") ) <th>$demographics.get("phone").get("label")</th> #end
+                        #if( $demographics.get("email") ) <th>$demographics.get("email").get("label")</th> #end
                     </tr>
-                    <tr> #if( $demographics.get(""phone"") ) <td>$demographics.get(""phone"").get(""value"")</td> #end
-                        #if( $demographics.get(""email"") ) <td>$demographics.get(""email"").get(""value"")</td> #end
+                    <tr> #if( $demographics.get("phone") ) <td>$demographics.get("phone").get("value")</td> #end
+                        #if( $demographics.get("email") ) <td>$demographics.get("email").get("value")</td> #end
                     </tr>
-                    <tr> #if( $demographics.get(""NIN"") ) <th>$demographics.get(""NIN"").get(""label"")</th>
+                    <tr> #if( $demographics.get("NIN") ) <th>$demographics.get("NIN").get("label")</th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""NIN"") ) <td>$demographics.get(""NIN"").get(""value"")</td>
+                    <tr> #if( $demographics.get("NIN") ) <td>$demographics.get("NIN").get("value")</td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""code"") ) <th>$demographics.get(""code"").get(""label"")</th>
+                    <tr> #if( $demographics.get("code") ) <th>$demographics.get("code").get("label")</th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""code"") ) <td>$demographics.get(""code"").get(""value"")</td>
+                    <tr> #if( $demographics.get("code") ) <td>$demographics.get("code").get("value")</td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""issueNo"") ) <th>$demographics.get(""issueNo"").get(""label"")</th>
+                    <tr> #if( $demographics.get("issueNo") ) <th>$demographics.get("issueNo").get("label")</th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""issueNo"") ) <td>$demographics.get(""issueNo"").get(""value"")</td>
+                    <tr> #if( $demographics.get("issueNo") ) <td>$demographics.get("issueNo").get("value")</td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""firstIssue"") ) <th>$demographics.get(""firstIssue"").get(""label"")
+                    <tr> #if( $demographics.get("firstIssue") ) <th>$demographics.get("firstIssue").get("label")
                         </th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""firstIssue"") ) <td>$demographics.get(""firstIssue"").get(""value"")
+                    <tr> #if( $demographics.get("firstIssue") ) <td>$demographics.get("firstIssue").get("value")
                         </td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""driverRestriction"") ) <th>
-                            $demographics.get(""driverRestriction"").get(""label"")</th>
+                    <tr> #if( $demographics.get("driverRestriction") ) <th>
+                            $demographics.get("driverRestriction").get("label")</th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""driverRestriction"") ) <td>
-                            $demographics.get(""driverRestriction"").get(""value"")</td>
+                    <tr> #if( $demographics.get("driverRestriction") ) <td>
+                            $demographics.get("driverRestriction").get("value")</td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""vehicleRestriction"") ) <th>
-                            $demographics.get(""vehicleRestriction"").get(""label"")</th>
+                    <tr> #if( $demographics.get("vehicleRestriction") ) <th>
+                            $demographics.get("vehicleRestriction").get("label")</th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""vehicleRestriction"") ) <td>
-                            $demographics.get(""vehicleRestriction"").get(""value"")</td>
+                    <tr> #if( $demographics.get("vehicleRestriction") ) <td>
+                            $demographics.get("vehicleRestriction").get("value")</td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""validityFrom"") ) <th>
-                            $demographics.get(""validityFrom"").get(""label"")</th>
+                    <tr> #if( $demographics.get("validityFrom") ) <th>
+                            $demographics.get("validityFrom").get("label")</th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""validityFrom"") ) <td>
-                            $demographics.get(""validityFrom"").get(""value"")</td>
+                    <tr> #if( $demographics.get("validityFrom") ) <td>
+                            $demographics.get("validityFrom").get("value")</td>
                         #end </tr>
-                    <tr> #if( $demographics.get(""validityTo"") ) <th>$demographics.get(""validityTo"").get(""label"")
+                    <tr> #if( $demographics.get("validityTo") ) <th>$demographics.get("validityTo").get("label")
                         </th>
                         #end </tr>
-                    <tr> #if( $demographics.get(""validityTo"") ) <td>$demographics.get(""validityTo"").get(""value"")
+                    <tr> #if( $demographics.get("validityTo") ) <td>$demographics.get("validityTo").get("value")
                         </td>
                         #end </tr>
 
                 </table>
-                <table> #if( $demographics.get(""addressLine1"") )
+                <table> #if( $demographics.get("addressLine1") )
                     <hr />
-                    <h1 class="" headings"">Address</h1> #end <tr> #if( $demographics.get(""addressLine1"") ) <th>
-                            $demographics.get(""addressLine1"").get(""label"")</th> #end #if(
-                        $demographics.get(""addressLine2"") ) <th>$demographics.get(""addressLine2"").get(""label"")
-                        </th> #end #if( $demographics.get(""addressLine3"") ) <th>
-                            $demographics.get(""addressLine3"").get(""label"")</th> #end </tr>
-                    <tr> #if( $demographics.get(""addressLine1"") ) <td>
-                            $demographics.get(""addressLine1"").get(""value"")</td> #end #if(
-                        $demographics.get(""addressLine2"") ) <td>$demographics.get(""addressLine2"").get(""value"")
-                        </td> #end #if( $demographics.get(""addressLine3"") ) <td>
-                            $demographics.get(""addressLine3"").get(""value"")</td> #end </tr>
+                    <h1 class=" headings">Address</h1> #end <tr> #if( $demographics.get("addressLine1") ) <th>
+                            $demographics.get("addressLine1").get("label")</th> #end #if(
+                        $demographics.get("addressLine2") ) <th>$demographics.get("addressLine2").get("label")
+                        </th> #end #if( $demographics.get("addressLine3") ) <th>
+                            $demographics.get("addressLine3").get("label")</th> #end </tr>
+                    <tr> #if( $demographics.get("addressLine1") ) <td>
+                            $demographics.get("addressLine1").get("value")</td> #end #if(
+                        $demographics.get("addressLine2") ) <td>$demographics.get("addressLine2").get("value")
+                        </td> #end #if( $demographics.get("addressLine3") ) <td>
+                            $demographics.get("addressLine3").get("value")</td> #end </tr>
                 </table>
                 <table>
-                    <tr> #if( $demographics.get(""region"") ) <th>$demographics.get(""region"").get(""label"")</th> #end
-                        #if( $demographics.get(""province"") ) <th>$demographics.get(""province"").get(""label"")</th>
-                        #end #if( $demographics.get(""city"") ) <th>$demographics.get(""city"").get(""label"")</th> #end
+                    <tr> #if( $demographics.get("region") ) <th>$demographics.get("region").get("label")</th> #end
+                        #if( $demographics.get("province") ) <th>$demographics.get("province").get("label")</th>
+                        #end #if( $demographics.get("city") ) <th>$demographics.get("city").get("label")</th> #end
                     </tr>
-                    <tr> #if( $demographics.get(""region"") ) <td>$demographics.get(""region"").get(""value"")</td> #end
-                        #if( $demographics.get(""province"") ) <td>$demographics.get(""province"").get(""value"")</td>
-                        #end #if( $demographics.get(""city"") ) <td>$demographics.get(""city"").get(""value"")</td> #end
+                    <tr> #if( $demographics.get("region") ) <td>$demographics.get("region").get("value")</td> #end
+                        #if( $demographics.get("province") ) <td>$demographics.get("province").get("value")</td>
+                        #end #if( $demographics.get("city") ) <td>$demographics.get("city").get("value")</td> #end
                     </tr>
                 </table>
                 <table>
-                    <tr> #if( $demographics.get(""zone"") ) <th>$demographics.get(""zone"").get(""label"")</th> #end
-                        #if( $demographics.get(""postalCode"") ) <th>$demographics.get(""postalCode"").get(""label"")
+                    <tr> #if( $demographics.get("zone") ) <th>$demographics.get("zone").get("label")</th> #end
+                        #if( $demographics.get("postalCode") ) <th>$demographics.get("postalCode").get("label")
                         </th> #end </tr>
-                    <tr> #if( $demographics.get(""zone"") ) <td>$demographics.get(""zone"").get(""value"")</td> #end
-                        #if( $demographics.get(""postalCode"") ) <td>$demographics.get(""postalCode"").get(""value"")
+                    <tr> #if( $demographics.get("zone") ) <td>$demographics.get("zone").get("value")</td> #end
+                        #if( $demographics.get("postalCode") ) <td>$demographics.get("postalCode").get("value")
                         </td> #end </tr>
-                    <tr>#if( $demographics.get(""modeOfClaim"") ) <th>$demographics.get(""modeOfClaim"").get(""label"")
+                    <tr>#if( $demographics.get("modeOfClaim") ) <th>$demographics.get("modeOfClaim").get("label")
                         </th> #end</tr>
-                    <tr> #if( $demographics.get(""modeOfClaim"") ) <td>$demographics.get(""modeOfClaim"").get(""value"")
+                    <tr> #if( $demographics.get("modeOfClaim") ) <td>$demographics.get("modeOfClaim").get("value")
                         </td> #end</tr>
-                </table> #if( $demographics.get(""parentOrGuardianName"") )
+                </table> #if( $demographics.get("parentOrGuardianName") )
                 <hr />
                 <table>
-                    <h1 class="" headings"">Gaurdian Details</h1>
+                    <h1 class=" headings">Gaurdian Details</h1>
                     <tr>
-                        <th>$demographics.get(""parentOrGuardianName"").get(""label"")</th> #if(
-                        $demographics.get(""parentOrGuardianRID"") ) <th>
-                            $demographics.get(""parentOrGuardianRID"").get(""label"")</th> #end #if(
-                        $demographics.get(""parentOrGuardianUIN"") ) <th>
-                            $demographics.get(""parentOrGuardianUIN"").get(""label"")</th> #end
+                        <th>$demographics.get("parentOrGuardianName").get("label")</th> #if(
+                        $demographics.get("parentOrGuardianRID") ) <th>
+                            $demographics.get("parentOrGuardianRID").get("label")</th> #end #if(
+                        $demographics.get("parentOrGuardianUIN") ) <th>
+                            $demographics.get("parentOrGuardianUIN").get("label")</th> #end
                     </tr>
                     <tr>
-                        <td>$demographics.get(""parentOrGuardianName"").get(""value"")</td> #if(
-                        $demographics.get(""parentOrGuardianRID"") ) <td>
-                            $demographics.get(""parentOrGuardianRID"").get(""value"")</td> #end #if(
-                        $demographics.get(""parentOrGuardianUIN"") ) <td>
-                            $demographics.get(""parentOrGuardianUIN"").get(""value"")</td> #end
+                        <td>$demographics.get("parentOrGuardianName").get("value")</td> #if(
+                        $demographics.get("parentOrGuardianRID") ) <td>
+                            $demographics.get("parentOrGuardianRID").get("value")</td> #end #if(
+                        $demographics.get("parentOrGuardianUIN") ) <td>
+                            $demographics.get("parentOrGuardianUIN").get("value")</td> #end
                     </tr>
                 </table> #end
-            </div> #if ( $ApplicantImageSource ) <div class="" photoDiv"">
+            </div> #if ( $ApplicantImageSource ) <div class=" photoDiv">
                 <table>
                     <tr>
                         <td>
@@ -413,67 +413,67 @@
                         <td><img src=${ApplicantImageSource} border=0 width=100 height=100 /></td>
                     </tr>
                 </table>
-            </div> #end <div style="" width: 100%; height: 50%; clear:both""></div> <br> <br />
+            </div> #end <div style=" width: 100%; height: 50%; clear:both"></div> <br> <br />
             <hr />
             <p class=head><b>${DocumentsLabel}</b></p>
             <hr />
             <table class=dataTable> #foreach( $key in $documents.keySet() ) <tr>
                     <td>
-                        <p class=headings>$documents.get($key).get(""label"")</p> <br />
-                        <p> $documents.get($key).get(""value"")</p>
+                        <p class=headings>$documents.get($key).get("label")</p> <br />
+                        <p> $documents.get($key).get("value")</p>
                     </td>
                 </tr> #end </table> <br />
             <hr />
             <p class=head><b>${BiometricsLabel}</b></p>
             <hr /> #foreach( $key in $biometrics.keySet() ) <table>
                 <tr>
-                    <td> $biometrics.get($key).get(""label"")<br />
-                        <p class=headings>${Fingers} ( $biometrics.get($key).get(""FingerCount"") ),${Iris} (
-                            $biometrics.get($key).get(""IrisCount"") ),${Face} (
-                            $biometrics.get($key).get(""FaceCount"") )<br /></p> <br />
+                    <td> $biometrics.get($key).get("label")<br />
+                        <p class=headings>${Fingers} ( $biometrics.get($key).get("FingerCount") ),${Iris} (
+                            $biometrics.get($key).get("IrisCount") ),${Face} (
+                            $biometrics.get($key).get("FaceCount") )<br /></p> <br />
                     </td>
                 </tr>
                 <table class=biometricsTable>
-                    <tr> #if( $biometrics.get($key).get(""CapturedLeftEye"") ) <td>
+                    <tr> #if( $biometrics.get($key).get("CapturedLeftEye") ) <td>
                             <p class=headings>${LeftEyeLabel}</p>
-                        </td> #end #if( $biometrics.get($key).get(""CapturedRightEye"") ) <td>
+                        </td> #end #if( $biometrics.get($key).get("CapturedRightEye") ) <td>
                             <p class=headings>${RightEyeLabel}</p>
                         </td> #end </tr>
-                    <tr> #if( $biometrics.get($key).get(""CapturedLeftEye"") ) <td> #if(
-                            $biometrics.get($key).get(""CapturedLeftEye"") ) <img
-                                src=$biometrics.get($key).get(""CapturedLeftEye"") border=0 width=85 height=80 /> #end
-                        </td> #end #if( $biometrics.get($key).get(""CapturedRightEye"") ) <td> #if(
-                            $biometrics.get($key).get(""CapturedRightEye"") ) <img
-                                src=$biometrics.get($key).get(""CapturedRightEye"") border=0 width=85 height=80 /> #end
+                    <tr> #if( $biometrics.get($key).get("CapturedLeftEye") ) <td> #if(
+                            $biometrics.get($key).get("CapturedLeftEye") ) <img
+                                src=$biometrics.get($key).get("CapturedLeftEye") border=0 width=85 height=80 /> #end
+                        </td> #end #if( $biometrics.get($key).get("CapturedRightEye") ) <td> #if(
+                            $biometrics.get($key).get("CapturedRightEye") ) <img
+                                src=$biometrics.get($key).get("CapturedRightEye") border=0 width=85 height=80 /> #end
                         </td> #end </tr>
                 </table>
                 <table class=biometricsTable>
-                    <tr> #if( $biometrics.get($key).get(""CapturedLeftSlap"") ) <td>
+                    <tr> #if( $biometrics.get($key).get("CapturedLeftSlap") ) <td>
                             <p class=headings>${LeftPalmLabel}</p>
-                        </td> #end #if( $biometrics.get($key).get(""CapturedRightSlap"") ) <td>
+                        </td> #end #if( $biometrics.get($key).get("CapturedRightSlap") ) <td>
                             <p class=headings>${RightPalmLabel}</p>
-                        </td> #end #if( $biometrics.get($key).get(""CapturedThumbs"") ) <td>
+                        </td> #end #if( $biometrics.get($key).get("CapturedThumbs") ) <td>
                             <p class=headings>${ThumbsLabel}</p>
                         </td> #end </tr>
-                    <tr> #if( $biometrics.get($key).get(""CapturedLeftSlap"") ) <td style=""
-                            text-align:-webkit-center""> <img src=$biometrics.get($key).get(""CapturedLeftSlap"")
+                    <tr> #if( $biometrics.get($key).get("CapturedLeftSlap") ) <td style="
+                            text-align:-webkit-center"> <img src=$biometrics.get($key).get("CapturedLeftSlap")
                                 border=0 width=85 height=80 /> </td> #end #if(
-                        $biometrics.get($key).get(""CapturedRightSlap"") ) <td style="" text-align:-webkit-center"">
-                            <img src=$biometrics.get($key).get(""CapturedRightSlap"") border=0 width=85 height=80 />
-                        </td> #end #if( $biometrics.get($key).get(""CapturedThumbs"") ) <td style=""
-                            text-align:-webkit-center""> <img src=$biometrics.get($key).get(""CapturedThumbs"") border=0
+                        $biometrics.get($key).get("CapturedRightSlap") ) <td style=" text-align:-webkit-center">
+                            <img src=$biometrics.get($key).get("CapturedRightSlap") border=0 width=85 height=80 />
+                        </td> #end #if( $biometrics.get($key).get("CapturedThumbs") ) <td style="
+                            text-align:-webkit-center"> <img src=$biometrics.get($key).get("CapturedThumbs") border=0
                                 width=85 height=80 /> </td> #end </tr>
                 </table> <br />
                 <table class=biometricsTable>
-                    <tr> #if( $biometrics.get($key).get(""FaceImageSource"") ) <td>
+                    <tr> #if( $biometrics.get($key).get("FaceImageSource") ) <td>
                             <p class=headings>${FaceLabel}</p>
-                        </td> #end #if( $biometrics.get($key).get(""subType"") == ""applicant"" && $ExceptionImageSource
+                        </td> #end #if( $biometrics.get($key).get("subType") == "applicant" && $ExceptionImageSource
                         ) <td>
                             <p class=headings>${ExceptionPhotoLabel}</p>
                         </td> #end </tr>
-                    <tr> #if( $biometrics.get($key).get(""FaceImageSource"") ) <td> <img
-                                src=$biometrics.get($key).get(""FaceImageSource"") border=0 width=85 height=80 /> </td>
-                        #end #if( $biometrics.get($key).get(""subType"") == ""applicant"" && $ExceptionImageSource )
+                    <tr> #if( $biometrics.get($key).get("FaceImageSource") ) <td> <img
+                                src=$biometrics.get($key).get("FaceImageSource") border=0 width=85 height=80 /> </td>
+                        #end #if( $biometrics.get($key).get("subType") == "applicant" && $ExceptionImageSource )
                         <td> <img src=${ExceptionImageSource} border=0 width=85 height=80 /> </td> #end
                     </tr>
                 </table><br />
