@@ -52,7 +52,7 @@
 		"emailId": {
 			"value": "email"
 		},
-		"NIN": {
+		"nin": {
 			"value": "NIN"
 		},
 		"uin": {
