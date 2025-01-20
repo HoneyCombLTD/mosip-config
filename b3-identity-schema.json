@@ -1,0 +1,1971 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "MOSIP Sample identity",
+    "additionalProperties": false,
+    "title": "MOSIP identity",
+    "type": "object",
+    "definitions": {
+      "simpleType": {
+        "uniqueItems": true,
+        "additionalItems": false,
+        "type": "array",
+        "items": {
+          "additionalProperties": false,
+          "type": "object",
+          "required": ["language", "value"],
+          "properties": {
+            "language": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "documentType": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "format": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "refNumber": {
+            "type": ["string", "null"]
+          }
+        }
+      },
+      "biometricsType": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "format": {
+            "type": "string"
+          },
+          "version": {
+            "type": "number",
+            "minimum": 0
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "properties": {
+      "identity": {
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "IDSchemaVersion",
+          "applicationType",
+          "surname",
+          "givenNames",
+          "otherNames",
+          "maidenNames",
+          "previousNames",
+          "gender",
+          "dateOfBirth",
+          "email",
+          "homePhone",
+          "mobilePhone",
+          "educationLevel",
+          "profession",
+          "occupation",
+          "religion",
+          "disabilities",
+          "residenceStatus",
+          "countryOfResidence",
+          "districtOfResidence",
+          "countyOfResidence",
+          "subcountyOfResidence",
+          "parishOfResidence",
+          "villageOfResidence",
+          "streetOfResidence",
+          "plotOfResidence",
+          "numberOfYearsAtResidence",
+          "districtOfPreviousResidence",
+          "postalAddressOfResidence",
+          "countryOfBirth",
+          "districtOfBirth",
+          "countyOfBirth",
+          "subcountyOfBirth",
+          "parishOfBirth",
+          "villageOfBirth",
+          "cityOfBirth",
+          "healthFacilityOfBirth",
+          "weightAtBirth",
+          "timeOfBirth",
+          "parityOfChild",
+          "countryOfOrigin",
+          "districtOfOrigin",
+          "countyOfOrigin",
+          "subcountyOfOrigin",
+          "parishOfOrigin",
+          "villageOfOrigin",
+          "tribeOfOrigin",
+          "clanOfOrigin",
+          "citizenship",
+          "citizenshipCertificateNumber",
+          "dualCitizenship",
+          "passportNumber",
+          "fileNumber",
+          "preferredPollingStation",
+          "pollingStationName",
+          "maritalStatus",
+          "spouseSurname",
+          "spouseGivenNames",
+          "spouseOtherNames",
+          "spousePreviousNames",
+          "spouseMaidenNames",
+          "spouseNin",
+          "spouseCitizenship",
+          "spouseCitizenshipCertificateNumber",
+          "spouseDualCitizenship",
+          "placeOfMarriage",
+          "dateOfMarriage",
+          "marriageType",
+          "marriageCertificateNumber",
+          "otherSpouses",
+          "numberOfSpouses",
+          "fatherSurname",
+          "fatherGivenNames",
+          "fatherPreviousNames",
+          "fatherOtherNames",
+          "fatherNin",
+          "fatherIDDocumentNumber",
+          "fatherCitizenship",
+          "fatherCitizenshipCertificateNumber",
+          "fatherDualCitizenship",
+          "fatherLivingStatus",
+          "fatherOccupation",
+          "fatherCountryOfResidence",
+          "fatherDistrictOfResidence",
+          "fatherCountyOfResidence",
+          "fatherSubcountyOfResidence",
+          "fatherParishOfResidence",
+          "fatherVillageOfResidence",
+          "fatherStreetOfResidence",
+          "fatherPlotOfResidence",
+          "fatherCountryOfOrigin",
+          "fatherDistrictOfOrigin",
+          "fatherCountyOfOrigin",
+          "fatherSubcountyOfOrigin",
+          "fatherParishOfOrigin",
+          "fatherVillageOfOrigin",
+          "fatherStreetOfOrigin",
+          "fatherPlotOfOrigin",
+          "motherSurname",
+          "motherGivenNames",
+          "motherOtherNames",
+          "motherMaidenNames",
+          "motherPreviousNames",
+          "motherNin",
+          "motherIDDocumentNumber",
+          "motherCitizenship",
+          "motherCitizenshipCertificateNumber",
+          "motherDualCitizenship",
+          "motherLivingStatus",
+          "motherOccupation",
+          "motherCountryOfResidence",
+          "motherDistrictOfResidence",
+          "motherCountyOfResidence",
+          "motherSubcountyOfResidence",
+          "motherParishOfResidence",
+          "motherVillageOfResidence",
+          "motherStreetOfResidence",
+          "motherPlotOfResidence",
+          "motherCountryOfOrigin",
+          "motherDistrictOfOrigin",
+          "motherCountyOfOrigin",
+          "motherSubcountyOfOrigin",
+          "motherParishOfOrigin",
+          "motherVillageOfOrigin",
+          "motherStreetOfOrigin",
+          "motherPlotOfOrigin",
+          "guardianSurname",
+          "guardianGivenNames",
+          "guardianOtherNames",
+          "guardianOccupation",
+          "guardianNin",
+          "guardianPassportNumber",
+          "guardianIDDocumentNumber",
+          "guardianCitizenship",
+          "guardianCitizenshipCertificateNumber",
+          "guardianDualCitizenship",
+          "guardianCountryOfResidence",
+          "guardianDistrictOfResidence",
+          "guardianCountyOfResidence",
+          "guardianSubcountyOfResidence",
+          "guardianParishOfResidence",
+          "guardianVillageOfResidence",
+          "guardianStreetOfResidence",
+          "guardianPlotOfResidence",
+          "spouseFullName",
+          "childrenDetails",
+          "heightOfApplicant",
+          "colourOfEyes",
+          "colourOfHair",
+          "fathersNameAndBirthPlace",
+          "mothersNameAndBirthPlace",
+          "previousNationality",
+          "contemporaryDescendant1",
+          "contemporaryDescendant2",
+          "placeOfIssue",
+          "dateOfIssue",
+          "issuingAuthority",
+          "drivingLicenseNumber",
+          "tin",
+          "bloodGroup",
+          "replacementType",
+          "proofOfIdentity",
+          "individualBiometrics"
+        ],
+        "properties": {
+          "proofOfAddress": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/documentType"
+          },
+          "gender": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "city": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "postalCode": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "proofOfException-1": {
+            "bioAttributes": [],
+            "fieldCategory": "evidence",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/documentType"
+          },
+          "referenceIdentityNumber": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^([0-9]{10,30})$",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "kyc",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "individualBiometrics": {
+            "bioAttributes": [
+              "leftEye",
+              "rightEye",
+              "rightIndex",
+              "rightLittle",
+              "rightRing",
+              "rightMiddle",
+              "leftIndex",
+              "leftLittle",
+              "leftRing",
+              "leftMiddle",
+              "leftThumb",
+              "rightThumb",
+              "face"
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/biometricsType"
+          },
+          "province": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "zone": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "region": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "proofOfDateOfBirth": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/documentType"
+          },
+          "residenceStatus": {
+            "bioAttributes": [],
+            "fieldCategory": "kyc",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "introducerRID": {
+            "bioAttributes": [],
+            "fieldCategory": "evidence",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "introducerBiometrics": {
+            "bioAttributes": [
+              "leftEye",
+              "rightEye",
+              "rightIndex",
+              "rightLittle",
+              "rightRing",
+              "rightMiddle",
+              "leftIndex",
+              "leftLittle",
+              "leftRing",
+              "leftMiddle",
+              "leftThumb",
+              "rightThumb",
+              "face"
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/biometricsType"
+          },
+          "individualAuthBiometrics": {
+            "bioAttributes": [
+              "leftEye",
+              "rightEye",
+              "rightIndex",
+              "rightLittle",
+              "rightRing",
+              "rightMiddle",
+              "leftIndex",
+              "leftLittle",
+              "leftRing",
+              "leftMiddle",
+              "leftThumb",
+              "rightThumb",
+              "face"
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/biometricsType"
+          },
+          "introducerUIN": {
+            "bioAttributes": [],
+            "fieldCategory": "evidence",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "proofOfIdentity": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/documentType"
+          },
+          "IDSchemaVersion": {
+            "bioAttributes": [],
+            "fieldCategory": "none",
+            "format": "none",
+            "type": "number",
+            "fieldType": "default",
+            "minimum": 0
+          },
+          "proofOfException": {
+            "bioAttributes": [],
+            "fieldCategory": "evidence",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/documentType"
+          },
+          "introducerName": {
+            "bioAttributes": [],
+            "fieldCategory": "evidence",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "proofOfRelationship": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/documentType"
+          },
+          "UIN": {
+            "bioAttributes": [],
+            "fieldCategory": "none",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "applicationType": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "surname": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "givenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "otherNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "maidenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "previousNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "dateOfBirth": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(1869|18[7-9][0-9]|19[0-9][0-9]|20[0-9][0-9])/([0][1-9]|1[0-2])/([0][1-9]|[1-2][0-9]|3[01])$",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "email": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^[A-Za-z0-9_\\-]+(\\.[A-Za-z0-9_]+)*@[A-Za-z0-9_-]+(\\.[A-Za-z0-9_]+)*(\\.[a-zA-Z]{2,})$",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "homePhone": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "mobilePhone": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "type": "string",
+            "fieldType": "default"
+          },
+          "educationLevel": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "profession": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "occupation": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "religion": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "disabilities": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "countryOfResidence": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "streetOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "plotOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "numberOfYearsAtResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "postalAddressOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "cityOfBirth": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "healthFacilityOfBirth": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "weightAtBirth": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "timeOfBirth": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "parityOfChild": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "tribeOfOrigin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "clanOfOrigin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "citizenship": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "citizenshipCertificateNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "dualCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "passportNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fileNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "preferredPollingStation": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "pollingStationName": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "maritalStatus": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseSurname": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseGivenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseOtherNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseMaidenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spousePreviousNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseNin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseCitizenshipCertificateNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseDualCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "placeOfMarriage": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "dateOfMarriage": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "type": "string"
+          },
+          "marriageType": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "marriageCertificateNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "otherSpouses": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "numberOfSpouses": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherSurname": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherGivenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherOtherNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherPreviousNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherNin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherIDDocumentNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherCitizenshipCertificateNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherDualCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherLivingStatus": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherOccupation": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherStreetOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherPlotOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherStreetOfOrigin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherPlotOfOrigin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherSurname": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherGivenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherOtherNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherMaidenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherPreviousNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherNin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherIDDocumentNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherCitizenshipCertificateNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherDualCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherLivingStatus": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherOccupation": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherStreetOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherPlotOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherStreetOfOrigin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherPlotOfOrigin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianSurname": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianGivenNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianOtherNames": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianNin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianIDDocumentNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianPassportNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianCitizenshipCertificateNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianDualCitizenship": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianOccupation": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianStreetOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianPlotOfResidence": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "districtOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "countyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "subcountyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "parishOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "villageOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "districtOfPreviousResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "districtOfBirth": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "countyOfBirth": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "subcountyOfBirth": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "parishOfBirth": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "villageOfBirth": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "districtOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "countyOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "subcountyOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "parishOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "villageOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherDistrictOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherCountyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherSubcountyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherParishOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherVillageOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherDistrictOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherCountyOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherSubcountyOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherParishOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherVillageOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherDistrictOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherCountyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherSubcountyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherParishOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherVillageOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherDistrictOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherCountyOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherSubcountyOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherParishOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherVillageOfOrigin": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianDistrictOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianCountyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianSubcountyOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianParishOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianVillageOfResidence": {
+            "bioAttributes": [],
+            "validators": [
+              {
+                "validator": "^(?=.{0,50}$).*",
+                "arguments": [],
+                "type": "regex"
+              }
+            ],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "spouseFullName": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "countryOfBirth": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "countryOfOrigin": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherCountryOfResidence": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fatherCountryOfOrigin": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherCountryOfResidence": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "motherCountryOfOrigin": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "guardianCountryOfResidence": {
+            "bioAttributes": [],
+            "fieldCategory": "pvt",
+            "format": "",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          },
+          "childrenDetails": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "heightOfApplicant": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "colourOfEyes": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "colourOfHair": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "fathersNameAndBirthPlace": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "mothersNameAndBirthPlace": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "previousNationality": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "contemporaryDescendant1": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "contemporaryDescendant2": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "placeOfIssue": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "dateOfIssue": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "issuingAuthority": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "drivingLicenseNumber": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "tin": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "bloodGroup": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "default",
+            "$ref": "#/definitions/simpleType"
+          },
+          "replacementType": {
+            "bioAttributes": [],
+            "validators": [],
+            "fieldCategory": "pvt",
+            "format": "none",
+            "fieldType": "dynamic",
+            "$ref": "#/definitions/simpleType"
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,4916 @@
+{
+    "identity": {
+      "identity": [
+        {
+          "id": "IDSchemaVersion",
+          "description": "ID Schema Version",
+          "type": "number",
+          "controlType": null,
+          "fieldType": "default",
+          "inputRequired": false,
+          "validators": [],
+          "required": true
+        },
+        {
+          "id": "applicationType",
+          "description": "Select Application Type",
+          "labelName": {
+            "eng": "Application Type",
+            "ara": "الاسم",
+            "fra": "Type"
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "subType": "ApplicationType",
+          "validators": [],
+          "alignmentGroup": "defaultrow0",
+          "formSection": "section0",
+          "formSectionTitle": "Application Type",
+          "required": true
+        },
+        {
+          "id": "surname",
+          "description": "Enter Surname",
+          "labelName": {
+            "eng": "Surname",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": true,
+          "alignmentGroup": "defaultrow1",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "givenNames",
+          "description": "Enter Given Name",
+          "labelName": {
+            "eng": "Given Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": true,
+          "alignmentGroup": "defaultrow1",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "otherNames",
+          "description": "Enter Other Names",
+          "labelName": {
+            "eng": "Other Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "alignmentGroup": "defaultrow1",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "maidenNames",
+          "description": "Enter Maiden Names",
+          "labelName": {
+            "eng": "Maiden Names",
+            "ara": "الاسم",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "alignmentGroup": "defaultrow2",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "previousNames",
+          "description": "Enter Previous Names",
+          "labelName": {
+            "eng": "Previous Names",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "alignmentGroup": "defaultrow2",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "gender",
+          "description": "Enter Gender",
+          "labelName": { "eng": "Sex", "ara": "جنس", "fra": "Le genre" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "gender",
+          "type": "simpleType",
+          "validators": [],
+          "alignmentGroup": "defaultrow3",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "required": true
+        },
+        {
+          "id": "dateOfBirth",
+          "description": "Enter DOB",
+          "labelName": {
+            "eng": "Date Of Birth (DD/MM/YYYY)",
+            "ara": "تاريخ الولادة",
+            "fra": "Date de naissance"
+          },
+          "controlType": "ageDate",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "string",
+          "validators": [],
+          "alignmentGroup": "defaultrow3",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "required": true
+        },
+        {
+          "id": "email",
+          "description": "Email",
+          "labelName": {
+            "eng": "Email",
+            "ara": "البريد الإلكتروني",
+            "fra": "Email"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "string",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-zA-Z]{2,})$",
+              "arguments": []
+            }
+          ],
+          "alignmentGroup": "defaultrow3",
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "required": true
+        },
+        {
+          "id": "homePhone",
+          "description": "Home Phone No.",
+          "labelName": {
+            "eng": "Home Phone No.",
+            "ara": "هاتف",
+            "fra": "Téléphone"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "string",
+          "validators": [],
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "required": false
+        },
+        {
+          "id": "mobilePhone",
+          "description": "Mobile Phone",
+          "labelName": {
+            "eng": "Mobile Phone No.",
+            "ara": "هاتف",
+            "fra": "Téléphone"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "string",
+          "validators": [],
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "required": true
+        },
+        {
+          "id": "educationLevel",
+          "description": "Highest level of education attained (primary, secondary, tertiary)",
+          "labelName": {
+            "eng": "Highest level of education attained",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "educationLevel",
+          "type": "simpleType",
+          "validators": [],
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "required": true
+        },
+        {
+          "id": "profession",
+          "description": "Profession",
+          "labelName": {
+            "eng": "Profession",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "occupation",
+          "description": "Occupation",
+          "labelName": {
+            "eng": "Occupation",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "religion",
+          "description": "Enter Religion",
+          "labelName": {
+            "eng": "Religion",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "transliteration": true
+        },
+        {
+          "id": "disabilities",
+          "description": "Disabilities",
+          "labelName": {
+            "eng": "Disabilities (Blind, Deaf, physical, Mental, Dumb)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "disability",
+          "type": "simpleType",
+          "validators": [],
+          "formPart": "partA",
+          "formSection": "section1",
+          "formSectionTitle": "Personal Information",
+          "required": true
+        },
+        {
+          "id": "residenceStatus",
+          "description": "Residence status",
+          "labelName": {
+            "eng": "Residence Status",
+            "ara": "حالة الإقامة",
+            "fra": "Statut de résidence"
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "residenceStatus",
+          "type": "simpleType",
+          "validators": [],
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": true
+        },
+        {
+          "id": "countryOfResidence",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [],
+          "subType": "country",
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": true
+        },
+        {
+          "id": "districtOfResidence",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": false
+        },
+        {
+          "id": "countyOfResidence",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": false
+        },
+        {
+          "id": "subcountyOfResidence",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": false
+        },
+        {
+          "id": "parishOfResidence",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": false
+        },
+        {
+          "id": "villageOfResidence",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": false
+        },
+        {
+          "id": "streetOfResidence",
+          "description": "Street",
+          "labelName": {
+            "eng": "Street",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "transliteration": true
+        },
+        {
+          "id": "plotOfResidence",
+          "description": "Plot/House No.",
+          "labelName": {
+            "eng": "Plot/House No.",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "transliteration": true
+        },
+        {
+          "id": "numberOfYearsAtResidence",
+          "description": "ENTER A NUMBER",
+          "labelName": {
+            "eng": "Number of years at this address",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?:[1-9]|[1-9][0-9]|1[0-4][0-9]|150)$",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "transliteration": true
+        },
+        {
+          "id": "districtOfPreviousResidence",
+          "description": "District",
+          "labelName": {
+            "eng": "District Of Previous Residence",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "required": false
+        },
+        {
+          "id": "postalAddressOfResidence",
+          "description": "Postal Address",
+          "labelName": {
+            "eng": "Postal Address",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section2",
+          "formSectionTitle": "Place of Residence",
+          "transliteration": true
+        },
+        {
+          "id": "sameLocationAsResidence",
+          "description": "Same As Place Of Residence",
+          "labelName": {
+            "eng": "SAME LOCATION",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "checkbox",
+          "inputRequired": true,
+          "type": "string",
+          "validators": [],
+          "changeAction": "copy&disable:countryOfResidence=countryOfBirth,districtOfResidence=districtOfBirth,countyOfResidence=countyOfBirth,subcountyOfResidence=subcountyOfBirth,parishOfResidence=parishOfBirth,villageOfResidence=villageOfBirth",
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "required": false
+        },
+        {
+          "id": "countryOfBirth",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [],
+          "subType": "country",
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "required": true
+        },
+        {
+          "id": "districtOfBirth",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "required": false
+        },
+        {
+          "id": "countyOfBirth",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "required": false
+        },
+        {
+          "id": "subcountyOfBirth",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "required": false
+        },
+        {
+          "id": "parishOfBirth",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "required": false
+        },
+        {
+          "id": "villageOfBirth",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfBirth.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfBirth.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "required": false
+        },
+        {
+          "id": "cityOfBirth",
+          "description": "City/Town",
+          "labelName": {
+            "eng": "City/Town",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "transliteration": true
+        },
+        {
+          "id": "healthFacilityOfBirth",
+          "description": "Health Facility",
+          "labelName": {
+            "eng": "Health Facility",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "transliteration": true
+        },
+        {
+          "id": "weightAtBirth",
+          "description": "Weight At Birth (Kgs)",
+          "labelName": {
+            "eng": "Weight At Birth (Kgs)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "transliteration": true
+        },
+        {
+          "id": "timeOfBirth",
+          "description": "Time of Birth (hh:mm)",
+          "labelName": {
+            "eng": "Time of Birth (hh:mm)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "transliteration": true
+        },
+        {
+          "id": "parityOfChild",
+          "description": "Parity of Child (in regard to mother)",
+          "labelName": {
+            "eng": "Parity of Child (in regard to mother)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section3",
+          "formSectionTitle": "Place of Birth",
+          "transliteration": true
+        },
+        {
+          "id": "sameOriginLocationAsBirth",
+          "description": "Same As Place Of Birth",
+          "labelName": {
+            "eng": "SAME LOCATION",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "checkbox",
+          "inputRequired": true,
+          "type": "string",
+          "validators": [],
+          "changeAction": "copy&disable:countryOfBirth=countryOfOrigin,districtOfBirth=districtOfOrigin,countyOfBirth=countyOfOrigin,subcountyOfBirth=subcountyOfOrigin,parishOfBirth=parishOfOrigin,villageOfBirth=villageOfOrigin",
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": false
+        },
+        {
+          "id": "countryOfOrigin",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [],
+          "subType": "country",
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": true
+        },
+        {
+          "id": "districtOfOrigin",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": false
+        },
+        {
+          "id": "countyOfOrigin",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": false
+        },
+        {
+          "id": "subcountyOfOrigin",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": false
+        },
+        {
+          "id": "parishOfOrigin",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": false
+        },
+        {
+          "id": "villageOfOrigin",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.countryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.countryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": false
+        },
+        {
+          "id": "tribeOfOrigin",
+          "description": "Indigenous community/Tribe",
+          "labelName": {
+            "eng": "Indigenous community/Tribe",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "clanOfOrigin",
+          "description": "Clan",
+          "labelName": {
+            "eng": "Clan",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "citizenship",
+          "description": "Citizenship Type",
+          "labelName": {
+            "eng": "Citizenship Type",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "citizenshipType",
+          "type": "simpleType",
+          "validators": [],
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "required": true
+        },
+        {
+          "id": "citizenshipCertificateNumber",
+          "description": "(If Naturalization, Registration or Dual)",
+          "labelName": {
+            "eng": "Citizenship Certificate Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "in",
+                "value": ["BN", "BR", "DC"],
+                "path": "$.citizenship.0.value"
+              }
+            ]
+          },
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "dualCitizenship",
+          "description": "Citizenship : Nationality",
+          "labelName": {
+            "eng": "If Dual, state Citizenship and the other Nationality",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "DC",
+                "path": "$.citizenship.0.value"
+              }
+            ]
+          },
+          "formSection": "section4",
+          "formSectionTitle": "Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "passportNumber",
+          "description": "passport Number",
+          "labelName": {
+            "eng": "passport Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section5",
+          "formSectionTitle": "Passport Information",
+          "transliteration": true
+        },
+        {
+          "id": "fileNumber",
+          "description": "File Number",
+          "labelName": {
+            "eng": "File Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section5",
+          "formSectionTitle": "Passport Information",
+          "transliteration": true
+        },
+        {
+          "id": "preferredPollingStation",
+          "description": "Preferred Polling Station",
+          "labelName": {
+            "eng": "Preferred Polling Station",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "preferPollingStation",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section6",
+          "formSectionTitle": "Voters Information",
+          "required": false
+        },
+        {
+          "id": "pollingStationName",
+          "description": "Polling Station Name",
+          "labelName": {
+            "eng": "Polling Station Name",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section6",
+          "formSectionTitle": "Voters Information",
+          "transliteration": true
+        },
+        {
+          "id": "maritalStatus",
+          "description": "Marital status",
+          "labelName": {
+            "eng": "Marital status",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "maritalStatus",
+          "type": "simpleType",
+          "formSection": "section6",
+          "formSectionTitle": "Voters Information",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "required": false
+        },
+        {
+          "id": "spouseSurname",
+          "description": "Enter Surname",
+          "labelName": {
+            "eng": "Surname",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "required": false,
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "102",
+                "path": "$.maritalStatus.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "spouseGivenNames",
+          "description": "Enter Given Name",
+          "labelName": {
+            "eng": "Given Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "required": false,
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "102",
+                "path": "$.maritalStatus.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "spouseOtherNames",
+          "description": "Enter Other Names",
+          "labelName": {
+            "eng": "Other Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "spousePreviousNames",
+          "description": "Enter Previous Names",
+          "labelName": {
+            "eng": "Previous Names",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "spouseMaidenNames",
+          "description": "Enter Maiden Names",
+          "labelName": {
+            "eng": "Maiden Names",
+            "ara": "الاسم",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "spouseNin",
+          "description": "National ID Number (NIN)",
+          "labelName": {
+            "eng": "National ID Number (NIN)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "spouseCitizenship",
+          "description": "Citizenship Type",
+          "labelName": {
+            "eng": "Citizenship Type",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "citizenshipType",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "102",
+                "path": "$.maritalStatus.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "required": false
+        },
+        {
+          "id": "spouseCitizenshipCertificateNumber",
+          "description": "(If Naturalization, Registration or Dual)",
+          "labelName": {
+            "eng": "Citizenship Certificate Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "in",
+                "value": ["BN", "BR", "DC"],
+                "path": "$.spouseCitizenship.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "spouseDualCitizenship",
+          "description": "If Dual, state Citizenship and the other Nationality",
+          "labelName": {
+            "eng": "If Dual, state Citizenship and the other Nationality",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "DC",
+                "path": "$.spouseCitizenship.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "placeOfMarriage",
+          "description": "Place Of Marriage",
+          "labelName": {
+            "eng": "Place Of Marriage",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "102",
+                "path": "$.maritalStatus.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "dateOfMarriage",
+          "description": "Date Of Marriage",
+          "labelName": {
+            "eng": "Date Of Marriage (DD/MM/YYYY)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "date",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "string",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "required": false
+        },
+        {
+          "id": "marriageType",
+          "description": "Type of Marriage",
+          "labelName": {
+            "eng": "Type of Marriage",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "marriageType",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "required": false
+        },
+        {
+          "id": "marriageCertificateNumber",
+          "description": "Marriage Certificate Number",
+          "labelName": {
+            "eng": "Marriage Certificate Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "transliteration": true
+        },
+        {
+          "id": "otherSpouses",
+          "description": "Other Spouses",
+          "labelName": {
+            "eng": "Other Spouses",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "otherSpouses",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "required": false
+        },
+        {
+          "id": "numberOfSpouses",
+          "description": "If Yes, Number of other spouses",
+          "labelName": {
+            "eng": "If Yes, Number of other spouses",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "Yes",
+                "path": "$.otherSpouses.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "ADT",
+                "path": "$.applicationType.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.applicationType.0.value"
+              }
+            ]
+          },
+          "formSection": "section7",
+          "formSectionTitle": "Spouse Details",
+          "required": false
+        },
+        {
+          "id": "fatherSurname",
+          "description": "Enter Surname",
+          "labelName": {
+            "eng": "Surname",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherGivenNames",
+          "description": "Enter Given Name",
+          "labelName": {
+            "eng": "Given Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherPreviousNames",
+          "description": "Enter Previous Names",
+          "labelName": {
+            "eng": "Previous Names",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherOtherNames",
+          "description": "Enter Other Names",
+          "labelName": {
+            "eng": "Other Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherNin",
+          "description": "National ID Number (NIN)",
+          "labelName": {
+            "eng": "National ID Number (NIN)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherIDDocumentNumber",
+          "description": "ID Document Number",
+          "labelName": {
+            "eng": "ID Document Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherCitizenship",
+          "description": "Citizenship Type",
+          "labelName": {
+            "eng": "Citizenship Type",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "citizenshipType",
+          "type": "simpleType",
+          "validators": [],
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "required": false
+        },
+        {
+          "id": "fatherCitizenshipCertificateNumber",
+          "description": "(If Naturalization, Registration or Dual)",
+          "labelName": {
+            "eng": "Citizenship Certificate Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "in",
+                "value": ["BN", "BR", "DC"],
+                "path": "$.fatherCitizenship.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherDualCitizenship",
+          "description": "If Dual, state Citizenship and the other Nationality",
+          "labelName": {
+            "eng": "If Dual, state Citizenship and the other Nationality",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "DC",
+                "path": "$.fatherCitizenship.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherLivingStatus",
+          "description": "Living Status",
+          "labelName": {
+            "eng": "Living Status",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "livingStatus",
+          "type": "simpleType",
+          "validators": [],
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "required": false
+        },
+        {
+          "id": "fatherOccupation",
+          "description": "Occupation",
+          "labelName": {
+            "eng": "Occupation",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section8",
+          "formSectionTitle": "Father Details",
+          "transliteration": true
+        },
+        {
+          "id": "fatherCountryOfResidence",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [],
+          "subType": "country",
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "fatherDistrictOfResidence",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "fatherCountyOfResidence",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "fatherSubcountyOfResidence",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "fatherParishOfResidence",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "fatherVillageOfResidence",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "fatherStreetOfResidence",
+          "description": "Street",
+          "labelName": {
+            "eng": "Street",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "transliteration": true
+        },
+        {
+          "id": "fatherPlotOfResidence",
+          "description": "Plot/House No.",
+          "labelName": {
+            "eng": "Plot/House No.",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section9",
+          "formSectionTitle": "Father's Place of Residence",
+          "transliteration": true
+        },
+        {
+          "id": "sameFatherOriginLocationAsResidence",
+          "description": "Same As Place Of Residence",
+          "labelName": {
+            "eng": "SAME LOCATION",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "checkbox",
+          "inputRequired": true,
+          "type": "string",
+          "validators": [],
+          "changeAction": "copy&disable:fatherCountryOfResidence=fatherCountryOfOrigin,fatherDistrictOfResidence=fatherDistrictOfOrigin,fatherCountyOfResidence=fatherCountyOfOrigin,fatherSubcountyOfResidence=fatherSubcountyOfOrigin,fatherParishOfResidence=fatherParishOfOrigin,fatherVillageOfResidence=fatherVillageOfOrigin",
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "fatherCountryOfOrigin",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [],
+          "subType": "country",
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "fatherDistrictOfOrigin",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "fatherCountyOfOrigin",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "fatherSubcountyOfOrigin",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "fatherParishOfOrigin",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "fatherVillageOfOrigin",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "fatherStreetOfOrigin",
+          "description": "Street",
+          "labelName": {
+            "eng": "Street",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "fatherPlotOfOrigin",
+          "description": "Plot/House No.",
+          "labelName": {
+            "eng": "Plot/House No.",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.fatherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section10",
+          "formSectionTitle": "Father's Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "motherSurname",
+          "description": "Enter Surname",
+          "labelName": {
+            "eng": "Surname",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherGivenNames",
+          "description": "Enter Given Name",
+          "labelName": {
+            "eng": "Given Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherOtherNames",
+          "description": "Enter Other Names",
+          "labelName": {
+            "eng": "Other Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherMaidenNames",
+          "description": "Enter Maiden Names",
+          "labelName": {
+            "eng": "Maiden Names",
+            "ara": "الاسم",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherPreviousNames",
+          "description": "Enter Previous Names",
+          "labelName": {
+            "eng": "Previous Names",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherNin",
+          "description": "National ID Number (NIN)",
+          "labelName": {
+            "eng": "National ID Number (NIN)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherIDDocumentNumber",
+          "description": "ID Document Number",
+          "labelName": {
+            "eng": "ID Document Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherCitizenship",
+          "description": "Citizenship Type",
+          "labelName": {
+            "eng": "Citizenship Type",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "citizenshipType",
+          "type": "simpleType",
+          "validators": [],
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "required": false
+        },
+        {
+          "id": "motherCitizenshipCertificateNumber",
+          "description": "(If Naturalization, Registration or Dual)",
+          "labelName": {
+            "eng": "Citizenship Certificate Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "in",
+                "value": ["BN", "BR", "DC"],
+                "path": "$.motherCitizenship.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherDualCitizenship",
+          "description": "If Dual, state Citizenship and the other Nationality",
+          "labelName": {
+            "eng": "If Dual, state Citizenship and the other Nationality",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "DC",
+                "path": "$.motherCitizenship.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "motherLivingStatus",
+          "description": "Living Status",
+          "labelName": {
+            "eng": "Living Status",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "livingStatus",
+          "type": "simpleType",
+          "validators": [],
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "required": false
+        },
+        {
+          "id": "motherOccupation",
+          "description": "Occupation",
+          "labelName": {
+            "eng": "Occupation",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section11",
+          "formSectionTitle": "Mother's details",
+          "transliteration": true
+        },
+        {
+          "id": "sameMotherResidenceLocationAsFather",
+          "description": "SAME RESIDENCE AS FATHER",
+          "labelName": {
+            "eng": "SAME LOCATION",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "checkbox",
+          "inputRequired": true,
+          "type": "string",
+          "validators": [],
+          "changeAction": "copy&disable:fatherCountryOfResidence=motherCountryOfResidence,fatherDistrictOfResidence=motherDistrictOfResidence,fatherCountyOfResidence=motherCountyOfResidence,fatherSubcountyOfResidence=motherSubcountyOfResidence,fatherParishOfResidence=motherParishOfResidence,fatherVillageOfResidence=motherVillageOfResidence",
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "motherCountryOfResidence",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [
+            { "type": "regex", "validator": "^(?=.{0,50}$).*", "arguments": [] }
+          ],
+          "subType": "country",
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "motherDistrictOfResidence",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "motherCountyOfResidence",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "motherSubcountyOfResidence",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "motherParishOfResidence",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "motherVillageOfResidence",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "required": false
+        },
+        {
+          "id": "motherStreetOfResidence",
+          "description": "Street",
+          "labelName": {
+            "eng": "Street",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "transliteration": false
+        },
+        {
+          "id": "motherPlotOfResidence",
+          "description": "Plot/House No.",
+          "labelName": {
+            "eng": "Plot/House No.",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section12",
+          "formSectionTitle": "Mother's Place of Residence",
+          "transliteration": false
+        },
+        {
+          "id": "motherCountryOfOrigin",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [
+            { "type": "regex", "validator": "^(?=.{0,50}$).*", "arguments": [] }
+          ],
+          "subType": "country",
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "motherDistrictOfOrigin",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "motherCountyOfOrigin",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "motherSubcountyOfOrigin",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "motherParishOfOrigin",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "motherVillageOfOrigin",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "required": false
+        },
+        {
+          "id": "motherStreetOfOrigin",
+          "description": "Street",
+          "labelName": {
+            "eng": "Street",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "motherPlotOfOrigin",
+          "description": "Plot/House No.",
+          "labelName": {
+            "eng": "Plot/House No.",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.motherCountryOfOrigin.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.motherCountryOfOrigin.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section13",
+          "formSectionTitle": "Mother's Place of Origin",
+          "transliteration": true
+        },
+        {
+          "id": "guardianSurname",
+          "description": "Enter Surname",
+          "labelName": {
+            "eng": "Surname",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianGivenNames",
+          "description": "Enter Given Name",
+          "labelName": {
+            "eng": "Given Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianOtherNames",
+          "description": "Enter Other Names",
+          "labelName": {
+            "eng": "Other Names",
+            "ara": "الاسم الكامل",
+            "fra": "Nom complet"
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianOccupation",
+          "description": "Occupation",
+          "labelName": {
+            "eng": "Occupation",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianPassportNumber",
+          "description": "Passport Number (A must for foreigners)",
+          "labelName": {
+            "eng": "Passport Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianNin",
+          "description": "National ID Number (NIN)",
+          "labelName": {
+            "eng": "National ID Number (NIN)",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianIDDocumentNumber",
+          "description": "ID Document Number",
+          "labelName": {
+            "eng": "ID Document Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,14}$).*",
+              "arguments": []
+            }
+          ],
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianCitizenship",
+          "description": "Citizenship Type",
+          "labelName": {
+            "eng": "Citizenship Type",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "subType": "citizenshipType",
+          "type": "simpleType",
+          "validators": [],
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "required": false
+        },
+        {
+          "id": "guardianCitizenshipCertificateNumber",
+          "description": "(If Naturalization, Registration or Dual)",
+          "labelName": {
+            "eng": "Citizenship Certificate Number",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "in",
+                "value": ["BN", "BR", "DC"],
+                "path": "$.guardianCitizenship.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianDualCitizenship",
+          "description": "If Dual, state Citizenship and the other Nationality",
+          "labelName": {
+            "eng": "If Dual, state Citizenship and the other Nationality",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "requiredCondition": {
+            "all": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "DC",
+                "path": "$.guardianCitizenship.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section14",
+          "formSectionTitle": "1st Adoptive / Responsible Guardian's details",
+          "transliteration": true
+        },
+        {
+          "id": "guardianCountryOfResidence",
+          "description": "country",
+          "labelName": { "eng": "Country", "ara": "", "fra": "" },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "dynamic",
+          "type": "simpleType",
+          "validators": [],
+          "subType": "country",
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "required": false
+        },
+        {
+          "id": "guardianDistrictOfResidence",
+          "description": "District",
+          "labelName": {
+            "eng": "District",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.guardianCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.guardianCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "parentLocCode": "UGA",
+          "locationHierarchyLevel": 1,
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "required": false
+        },
+        {
+          "id": "guardianCountyOfResidence",
+          "description": "county",
+          "labelName": {
+            "eng": "County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.guardianCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.guardianCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 2,
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "required": false
+        },
+        {
+          "id": "guardianSubcountyOfResidence",
+          "description": "Sub-County",
+          "labelName": {
+            "eng": "Sub-County",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.guardianCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.guardianCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 3,
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "required": false
+        },
+        {
+          "id": "guardianParishOfResidence",
+          "description": "Parish/Ward",
+          "labelName": {
+            "eng": "Parish/Ward",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.guardianCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.guardianCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 4,
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "required": false
+        },
+        {
+          "id": "guardianVillageOfResidence",
+          "description": "village",
+          "labelName": {
+            "eng": "Village",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "dropdown",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.guardianCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.guardianCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "locationHierarchyLevel": 5,
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "required": false
+        },
+        {
+          "id": "guardianStreetOfResidence",
+          "description": "Street",
+          "labelName": {
+            "eng": "Street",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.guardianCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.guardianCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "transliteration": true
+        },
+        {
+          "id": "guardianPlotOfResidence",
+          "description": "Plot/House No.",
+          "labelName": {
+            "eng": "Plot/House No.",
+            "ara": "",
+            "fra": ""
+          },
+          "controlType": "textbox",
+          "inputRequired": true,
+          "fieldType": "default",
+          "type": "simpleType",
+          "validators": [
+            {
+              "type": "regex",
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": []
+            }
+          ],
+          "visibleCondition": {
+            "any": [
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "UG",
+                "path": "$.guardianCountryOfResidence.0.value"
+              },
+              {
+                "fact": "identity",
+                "operator": "equal",
+                "value": "",
+                "path": "$.guardianCountryOfResidence.0.value"
+              }
+            ]
+          },
+          "required": false,
+          "formSection": "section15",
+          "formSectionTitle": "Guardian's Residential Address",
+          "transliteration": true
+        },
+        {
+          "id": "proofOfAddress",
+          "description": "proofOfAddress",
+          "labelName": {
+            "ara": "إثبات العنوان",
+            "fra": "Address Proof",
+            "eng": "Address Proof"
+          },
+          "controlType": "fileupload",
+          "inputRequired": true,
+          "validators": [],
+          "subType": "POA",
+          "required": true
+        },
+        {
+          "id": "proofOfIdentity",
+          "description": "proofOfIdentity",
+          "labelName": {
+            "ara": "إثبات الهوية",
+            "fra": "Identity Proof",
+            "eng": "Identity Proof"
+          },
+          "controlType": "fileupload",
+          "inputRequired": true,
+          "validators": [],
+          "subType": "POI",
+          "required": true
+        },
+        {
+          "id": "proofOfRelationship",
+          "description": "proofOfRelationship",
+          "labelName": {
+            "ara": "إثبات العلاقة",
+            "fra": "Relationship Proof",
+            "eng": "Relationship Proof"
+          },
+          "controlType": "fileupload",
+          "inputRequired": true,
+          "validators": [],
+          "subType": "POR",
+          "required": true
+        },
+        {
+          "id": "proofOfDateOfBirth",
+          "description": "proofOfDateOfBirth",
+          "labelName": {
+            "ara": "دليل DOB",
+            "fra": "DOB Proof",
+            "eng": "DOB Proof"
+          },
+          "controlType": "fileupload",
+          "inputRequired": true,
+          "validators": [],
+          "subType": "POB",
+          "required": true
+        },
+        {
+          "id": "proofOfException",
+          "description": "proofOfException",
+          "labelName": {
+            "ara": "إثبات الاستثناء",
+            "fra": "Exception Proof",
+            "eng": "Exception Proof"
+          },
+          "controlType": "fileupload",
+          "inputRequired": true,
+          "validators": [],
+          "subType": "POE",
+          "required": true
+        },
+        {
+          "id": "proofOfException-1",
+          "description": "proofOfException",
+          "labelName": {
+            "ara": "إثبات الاستثناء 2",
+            "fra": "Exception Proof",
+            "eng": "Exception Proof"
+          },
+          "controlType": "fileupload",
+          "inputRequired": true,
+          "validators": [],
+          "subType": "POE",
+          "required": true
+        }
+      ],
+      "locationHierarchy": [
+        ["region", "province", "city", "zone", "postalCode"],
+        [
+          "districtOfResidence",
+          "countyOfResidence",
+          "subcountyOfResidence",
+          "parishOfResidence",
+          "villageOfResidence"
+        ],
+        [
+          "districtOfBirth",
+          "countyOfBirth",
+          "subcountyOfBirth",
+          "parishOfBirth",
+          "villageOfBirth"
+        ],
+        [
+          "districtOfOrigin",
+          "countyOfOrigin",
+          "subcountyOfOrigin",
+          "parishOfOrigin",
+          "villageOfOrigin"
+        ],
+        [
+          "fatherDistrictOfResidence",
+          "fatherCountyOfResidence",
+          "fatherSubcountyOfResidence",
+          "fatherParishOfResidence",
+          "fatherVillageOfResidence"
+        ],
+        [
+          "fatherDistrictOfOrigin",
+          "fatherCountyOfOrigin",
+          "fatherSubcountyOfOrigin",
+          "fatherParishOfOrigin",
+          "fatherVillageOfOrigin"
+        ],
+        [
+          "motherDistrictOfResidence",
+          "motherCountyOfResidence",
+          "motherSubcountyOfResidence",
+          "motherParishOfResidence",
+          "motherVillageOfResidence"
+        ],
+        [
+          "motherDistrictOfOrigin",
+          "motherCountyOfOrigin",
+          "motherSubcountyOfOrigin",
+          "motherParishOfOrigin",
+          "motherVillageOfOrigin"
+        ],
+        [
+          "guardianDistrictOfResidence",
+          "guardianCountyOfResidence",
+          "guardianSubcountyOfResidence",
+          "guardianParishOfResidence",
+          "guardianVillageOfResidence"
+        ],
+        ["districtOfPreviousResidence"]
+      ]
+    }
+  }
+  
